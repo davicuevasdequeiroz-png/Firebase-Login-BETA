@@ -5,12 +5,21 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 function Login() {
     const loginGoogle = async () => {
         const provider = new GoogleAuthProvider();
-
+        
+        provider.setCustomParameters({
+            hd: "icrop.com.br"
+        });
         try {
             const result = await signInWithPopup(auth, provider);
-            console.log("Usuário logado:", result.user);
+            const email = result.user.email;
             
-        } catch (error) {
+            if (!email.endsWith("@icrop.com.br")) {
+                    auth.signOut(); 
+                alert("Apenas e-mails corporativos são permitidos!");
+                return;
+            }
+
+        } catch(error) {
             console.error("Erro ao fazer login com Google:", error);
         }
     };
