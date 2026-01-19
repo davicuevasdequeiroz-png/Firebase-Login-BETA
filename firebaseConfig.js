@@ -1,4 +1,4 @@
-import { initializeApp, getApps, getApp } from "firebase/app"; // Adicionado getApps e getApp
+import { initializeApp, getApps, getApp } from "firebase/app"; 
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -9,11 +9,8 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
-
-// Lógica para não inicializar o Firebase duas vezes (Evita erros no Hot Reload)
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 
-// Inicializa a autenticação e exporta
 const auth = getAuth(app);
 
 export { auth };
