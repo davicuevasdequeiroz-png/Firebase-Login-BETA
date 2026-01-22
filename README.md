@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PT/BR
 
-## Getting Started
+Este projeto serve como uma estrutura base (boilerplate) para sistemas internos que necessitam de autenticação. Ele já vem configurado com **Next.js** e **Firebase Authentication**, pronto para ser adaptado conforme as regras de negócio da empresa.
 
-First, run the development server:
+## 🛠 Tecnologias Utilizadas
+
+* **Framework:** [Next.js](https://nextjs.org/)
+* **Autenticação:** [Firebase Auth](https://firebase.google.com/)
+
+## 📂 Estrutura Principal
+
+O fluxo de autenticação está concentrado nestes três arquivos principais:
+
+1.  **`login.jsx`**: Componente responsável pela interface de entrada e lógica de conexão com o Firebase.
+2.  **`logout.jsx`**: Componente funcional para encerrar a sessão do usuário de forma segura.
+3.  **`page.jsx`**: A página principal (entry point). Aqui você deve definir a lógica de redirecionamento (se o usuário não estiver logado) ou renderizar o conteúdo protegido.
+
+## 🚀 Como Configurar e Rodar
+
+### 1. Clonar e Instalar
+Faça o clone do repositório e instale as dependências:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+# ou
+yarn install
+````
+
+Para que a conexão com o Firebase funcione, você precisa criar um arquivo chamado .env na raiz do projeto.
+
+Copie as chaves do seu projeto no Console do Firebase e preencha conforme o modelo abaixo. O arquivo firebaseConfig.js já está preparado para ler estas variáveis:
+
+
+Snippet de código
+
+# .env
+
+NEXT_PUBLIC_FIREBASE_API_KEY=sua_api_key_aqui
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu_projeto.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=seu_projeto.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=seu_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=seu_app_id
 ```
+🎨 Como Adaptar
+Este projeto foi desenhado para ser **flexível**. Para utilizá-lo em seu departamento:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edite o page.jsx para ajustar o nome e desing para melhor identidade visual da sua empresa.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No login.jsx, **substitua** o **`provider.setCustomParameters`** juntamente com **`if`** para que o email coorporativo de sua empresa funcione e seja o unico aceito em seu login.

@@ -2,6 +2,7 @@
 import { auth } from "../../firebaseConfig";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
+import {motion}  from 'framer-motion';
 
 function Login() {
     const router = useRouter();
@@ -29,7 +30,6 @@ function Login() {
             console.error("Erro ao fazer login com Google:", error);
         }
     };
-
     return (
         <div>
             <p style={{ 
@@ -39,7 +39,10 @@ function Login() {
             margin: '0 0 14px 0',
             color: '#c7c7c7'
             }}>Login</p>
-            <button onClick={loginGoogle}
+            <motion.button 
+                    whileHover={{ scale: 1.03 }}
+                    transition={{type: 'spring', stiffness: 250, damping: 20}}
+            onClick={loginGoogle}
                 style={{
                     backgroundColor: '#ffffff',
                     color: '#333333',
@@ -51,7 +54,7 @@ function Login() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '12px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 }}
             >
                 <img
@@ -67,7 +70,7 @@ function Login() {
                     }}>
                         Entrar com Google Workspace
                 </span>
-            </button>
+            </motion.button>
             
         </div>
     );

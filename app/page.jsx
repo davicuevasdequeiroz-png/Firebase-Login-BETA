@@ -31,7 +31,7 @@ function App() {
             {/*href="#" links*/}
             <a href="#" style={styles.link}>Termos de Uso</a>
             <span style={styles.separator}>|</span>
-            <a href="#" style={styles.link}>TI Suporte</a>
+            <a href="#" style={styles.link}>iAra</a>
         </div>
         <p style={styles.subtitle}>© iCrop Tecnologia e Consultoria Agricola S.A</p>
       </div>
@@ -75,8 +75,8 @@ const styles = {
     maxWidth: '400px',
     padding: '40px',
     textAlign: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    backdropFilter: 'blur(10px) saturate(90%)',
+    backgroundColor: 'rgba(227, 224, 224, 0.05)',
+    backdropFilter: 'blur(9px) saturate(90%)',
     WebkitBackdropFilter: 'blur(40px) saturate(150%)',
     border: '1px solid rgba(255, 255, 255, 0.2)',
     borderTop: '1px solid rgba(255, 255, 255, 0.4)',
