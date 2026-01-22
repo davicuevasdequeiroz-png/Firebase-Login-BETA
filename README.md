@@ -24,17 +24,15 @@ Faça o clone do repositório e instale as dependências:
 npm install
 # ou
 yarn install
-````
+```
 
 Para que a conexão com o Firebase funcione, você precisa criar um arquivo chamado .env na raiz do projeto.
 
 Copie as chaves do seu projeto no Console do Firebase e preencha conforme o modelo abaixo. O arquivo firebaseConfig.js já está preparado para ler estas variáveis:
 
 
-Snippet de código
-
-# .env
-
+Snippet de código .env
+```bash
 NEXT_PUBLIC_FIREBASE_API_KEY=sua_api_key_aqui
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=seu_projeto.firebaseapp.com
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=seu_project_id
@@ -42,7 +40,7 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=seu_projeto.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=seu_messaging_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=seu_app_id
 ```
-🎨 Como Adaptar
+# 🎨 Como Adaptar
 Este projeto foi desenhado para ser **flexível**. Para utilizá-lo em seu departamento:
 
 Edite o page.jsx para ajustar o nome e desing para melhor identidade visual da sua empresa.

@@ -29,9 +29,14 @@ function App() {
       <div style={styles.footer}>
         <div style={styles.footerLinks}>
             {/*href="#" links*/}
-            <a href="#" style={styles.link}>Termos de Uso</a>
+            <a href="/transparencia-iCrop.pdf"
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={styles.link}>Termos de Uso</a>
+
             <span style={styles.separator}>|</span>
-            <a href="#" style={styles.link}>iAra</a>
+            <a href="https://api.whatsapp.com/send/?phone=558003210520&text&type=phone_number&app_absent=0" 
+            style={styles.link}>iAra</a>
         </div>
         <p style={styles.subtitle}>© iCrop Tecnologia e Consultoria Agricola S.A</p>
       </div>

@@ -37,11 +37,11 @@ function Login() {
             fontSize: '30px', 
             fontWeight: '800', 
             margin: '0 0 14px 0',
-            color: '#c7c7c7'
+            color: '#e2e2e2'
             }}>Login</p>
             <motion.button 
                     whileHover={{ scale: 1.03 }}
-                    transition={{type: 'spring', stiffness: 250, damping: 20}}
+                    transition={{type: 'spring', stiffness: 250, damping: 28}}
             onClick={loginGoogle}
                 style={{
                     backgroundColor: '#ffffff',
