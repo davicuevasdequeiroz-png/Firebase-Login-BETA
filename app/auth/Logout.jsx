@@ -1,7 +1,6 @@
 'use client';
 import {auth} from "../../firebaseConfig";
 import { signOut } from "firebase/auth";
-import { motion } from "framer-motion";
 
 function Logout({user} ) {
     return (
@@ -13,10 +12,7 @@ function Logout({user} ) {
             }}>
             <h2 style={{margin: '0 0 10px 0', color: '#ffffff' }}>Olá, {user?.displayName}</h2>
             
-            <motion.button
-            
-                    whileHover={{ scale: 1.03 }}
-                    transition={{type:'spring' , stiffness: 250, damping: 30}}
+            <button
             onClick={() => signOut(auth)}
                 style={{
                     backgroundColor: '#ffffff',
@@ -44,7 +40,7 @@ function Logout({user} ) {
                     letterSpacing: '0.3px'
 
                     }}>Sair</span>
-            </motion.button>
+            </button>
         </div>
     );
 }

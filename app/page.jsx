@@ -11,7 +11,7 @@ function App() {
     auth.onAuthStateChanged(setUser);
   }, []);
 
-  return (
+  return (      
     <div style={styles.container}>
       <div style={styles.backgroundImage}></div>
       <img
@@ -28,7 +28,6 @@ function App() {
       </div>
       <div style={styles.footer}>
         <div style={styles.footerLinks}>
-            {/*href="#" links*/}
             <a href="/transparencia-iCrop.pdf"
             target="_blank" 
             rel="noopener noreferrer"
@@ -63,14 +62,14 @@ const styles = {
     width: '100%',
     height: '100%',
     zIndex: -1,
-    backgroundImage: "url('background.png')",
+    backgroundImage: "url('fundo.jpg')",
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
   logo: {
     width: '140px',
     marginBottom: '40px',
-    filter: 'brightness(0) invert(1) drop-shadow(0 4px 6px rgba(0,0,0,0.3))', 
+    filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))', 
     zIndex: 10
   },
   glassCard: {
